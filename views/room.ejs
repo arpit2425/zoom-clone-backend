@@ -4,16 +4,25 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Zoom clone</title>
-        <link rel="stylesheet" href="style.css">
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script> -->
-<script src="/socket.io/socket.io.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script> -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
         <script>
-        const roomId="<%= roomId %>";
+            const roomId = '<%= roomId %>';
         </script>
     </head>
     <body>
-    <div id="video-grid"></div>
-      
-     <script src='script.js' defer></script>
+        <div class="video-grid"></div>
+        <!-- <div class="main">
+        <div class="main__left">
+        <div class="main__videos">
+        <div id="video-grid"></div>
+        </div>
+        </div>
+        <div class="main__right"></div>
+        </div> -->
+
+        <script src="script.js" defer></script>
     </body>
 </html>
