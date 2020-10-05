@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+const server=require('http').Server(app);
+const io=require('socket.io')(server);
 const {v4:uuidv4}=require('uuid')
 
 app.set('view engine', 'ejs');
@@ -13,3 +15,8 @@ res.render('room',{roomId:req.params.room})
 app.listen(3030, (req, res) => {
     console.log('Listening ');
 });
+io.on('connection',socket=>{
+socket.on('join-room',()=>{
+console.log('joined')
+})
+})
