@@ -16,9 +16,12 @@
 .main__videos {
     flex-grow: 1;
     background-color: black;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill,300px);
+    grid-auto-rows: 300px;
     padding: 40px;
 }
 
